@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  node:
+    image: node:10.16.3
+    env_file: .env
+    ports:
+      - $APP_PORT:$APP_PORT
+    volumes:
+      - ./:/home
+    tty: true
+    working_dir: /home
+    command: bash -c 'npm install && node index.js'

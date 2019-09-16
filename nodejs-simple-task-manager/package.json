@@ -1,0 +1,14 @@
+{
+  "name": "nodejs-simple-task-manager",
+  "version": "1.0.0",
+  "description": "This is a Simple Task Manager",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "gammaaex",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
