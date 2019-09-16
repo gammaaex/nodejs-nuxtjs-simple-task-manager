@@ -26,27 +26,27 @@ export const mutations = {
 }
 
 export const actions = {
-  async getTask({ commit, dispatch, state }) {
+  async getTask({ commit, state }) {
     const { data } = await axios.get(`${url}/${state.editedTask.id}`)
 
     commit('setEditedTask', data)
   },
 
-  async getTaskList({ commit, dispatch, state }) {
+  async getTaskList({ commit }) {
     const { data } = await axios.get(url)
 
     commit('setTaskList', data)
   },
 
-  async postTask({ commit, dispatch, state }) {
+  async postTask({ state }) {
     await axios.post(url, state.editedTask)
   },
 
-  async putTask({ commit, dispatch, state }) {
+  async putTask({ state }) {
     await axios.put(`${url}/${state.editedTask.id}`, state.editedTask)
   },
 
-  async deleteTask({ commit, dispatch, state }) {
+  async deleteTask({ state }) {
     await axios.delete(`${url}/${state.editedTask.id}`)
   }
 }
